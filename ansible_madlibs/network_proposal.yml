@@ -2,15 +2,15 @@
 - name: Mad Libs Network Proposal
   hosts: localhost
   vars:
-    company_name: 
-    industry: 
-    adjective_1: 
+    company_name: Foo
+    industry: Bar
+    adjective_1: Baz
     adjective_2:
     adjective_3: 
     number: 
     problem: 
     adjective_4: 
-    adjective_5:
+    adjective_5: Slipery
     noun_1: 
     verb_1: 
     number: 
@@ -20,9 +20,15 @@
     adjective_7: 
     adjective_8: 
 
+
     
   tasks:
-    - name: write Mad Lib using jinja2
+    - name: write Mad Lib using jinja2 as a TXT file
       ansible.builtin.template:
         src: network_proposal_txt.j2
-        dest: net.txt
+        dest: network_proposal.txt
+
+    - name: write Mad Lib using jinja2 as a HTML file
+      ansible.builtin.template:
+        src: network_proposal_html.j2
+        dest: network_proposal.html
