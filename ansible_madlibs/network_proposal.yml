@@ -1,0 +1,28 @@
+---
+- name: Mad Libs Network Proposal
+  hosts: localhost
+  vars:
+    company_name: 
+    industry: 
+    adjective_1: 
+    adjective_2:
+    adjective_3: 
+    number: 
+    problem: 
+    adjective_4: 
+    adjective_5:
+    noun_1: 
+    verb_1: 
+    number: 
+    data_rate: 
+    adjective_6: 
+    noun_2: 
+    adjective_7: 
+    adjective_8: 
+
+    
+  tasks:
+    - name: write Mad Lib using jinja2
+      ansible.builtin.template:
+        src: network_proposal_txt.j2
+        dest: net.txt
