@@ -35,8 +35,9 @@ STEP 3: Install Sample Files
 
 Copy and paste the following into the terminal
 
-
+```
 git clone https://github.com/danaugustine/ansible-cite2023.git 
+```
 
 
 After git completes, go to File → Open in the editor and select "ansible-cite2023". Click Open. 
