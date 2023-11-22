@@ -1,9 +1,9 @@
 ---
-- name: SNMP Config for Ruckus ICX 7150
+- name: Router configs your District
   hosts: all
 
   tasks:
     - name: Write an SNMP config block for Ruckus Switch
       ansible.builtin.template:
-        src: snmp.j2
-        dest: snmp_{{siteabbreviation}}.txt
+        src: ruckus.j2
+        dest: output/ruckus_{{inventory_hostname}}.txt

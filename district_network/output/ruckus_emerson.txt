@@ -1,0 +1,47 @@
+# Ruckus Template for ICX
+
+# Enter commands in 'config' mode
+
+contact BUSD Technology <technologyhelpdesk@berkeley.net>
+location Emerson Elementary School_123 [router loopback: 10.1.1.13] 2800 Forest Ave, Berkeley, CA 94705 [37.8610751,-122.250278]
+
+#Add all VLAN 
+
+vlan 7
+ name BUILDING
+!
+vlan 10
+ name MANAGEMENT
+!
+vlan 16   
+ name WIRED_PORT
+!
+vlan 24
+ name RESERVED_FOR_LOCAL_SITE
+!
+vlan 112
+ name WIRELESS_1
+!
+vlan 128
+ name WIRELESS_2
+!
+vlan 144
+ name WIRELESS_3
+!
+vlan 160
+ name WIRELESS_4
+!
+vlan 176
+ name WIRELESS_5
+!
+vlan 192
+ name WIRELESS_6
+!
+vlan 401
+ name VOICE
+!
+vlan 701
+ name CAMERA
+!
+vlan 801
+ name HEALTH
