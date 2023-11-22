@@ -1,0 +1,14 @@
+johnmuir:
+  hosts:
+    router.johnmuir.berkeley.net:
+    idf01.johnmuir.berkeley.net:
+    idf02.johnmuir.berkeley.net:
+
+routers:
+  hosts:
+    router.johnmuir.berkeley.net:
+
+accessswitches:
+  hosts:
+    idf01.johnmuir.berkeley.net:
+    idf02.johnmuir.berkeley.net:

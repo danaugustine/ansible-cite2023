@@ -1,0 +1,4 @@
+ansible-inventory -i inventory all/ --list (--yaml)
+
+ansible-playbook snmp_config.yml -i inventory
+

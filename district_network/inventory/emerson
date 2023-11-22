@@ -1,0 +1,18 @@
+emerson:
+  hosts:
+    router.emerson.berkeley.net:
+    idf01.emerson.berkeley.net:
+    idf02.emerson.berkeley.net:
+    idf03.emerson.berkeley.net:
+    idf04.emerson.berkeley.net:
+
+routers:
+  hosts:
+    router.emerson.berkeley.net:
+
+accessswitches:
+  hosts:
+    idf01.emerson.berkeley.net:
+    idf02.emerson.berkeley.net:
+    idf03.emerson.berkeley.net:
+    idf04.emerson.berkeley.net:
