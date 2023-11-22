@@ -1,6 +1,6 @@
 # Welcome to Fun with Ansible for CITE 2023
 
-_Novemeber 30, 2023 - go.ousd.org/ansible[go.ousd.org/ansible]_
+_Novemeber 30, 2023 - https://go.ousd.org/ansible_
 
 ---
 
