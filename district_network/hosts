@@ -1,2 +1,6 @@
-emerson
-johnmuir
+---
+routers:
+  hosts:
+    emerson:
+    johnmuir:
+    rosaparks:

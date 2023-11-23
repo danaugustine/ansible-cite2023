@@ -1,0 +1,13 @@
+---
+sitename: Rosa Parks Elementary School
+sitecode: 24
+siteabbreviation: RPE
+siteaddress: 920 Allston Way, Berkeley, CA 94710
+sitegps: 37.8654198,-122.297200
+trunk_port: ethe 1/3/4
+vlans:
+  Access : 10
+  GuestWiFi : 20
+  StudentWiFi : 30
+  StaffWiFi : 40
+  Management : 200

@@ -1,0 +1,11 @@
+# Generate the Ruckus create vlan statements from a dictionary called vlans
+
+# Iterate over the key, value pairs in the dictionary 
+{% for vlan_id, vlan_name in vlans.items() %}
+  vlan {{ vlan_name }} name {{ vlan_id }} by port
+  {% if trunk_port %}
+  tagged {{ trunk_port }}
+  {% endif %}
+!
+{% endfor %}
+
