@@ -1,0 +1,33 @@
+---
+- name: Mad Libs - Postcard from CITE
+  hosts: localhost
+  vars:
+    persons_name: 
+    verb_1:
+    celebrity:
+    tv_show:
+    tv_charater:
+    vendor: 
+    noun_1: 
+    noun_2: 
+    noun_3: 
+    adjective_1: 
+    vendor: 
+    noun_4: 
+    adjective_2: 
+    cite_session: 
+    verb_2: 
+    salutation: 
+
+
+    
+  tasks:
+    - name: write Mad Lib using jinja2 template in Markdown
+      ansible.builtin.template:
+        src: cite_postcard_md.j2
+        dest: cite_postcard.md
+
+    # - name: write Mad Lib using jinja2 as a HTML file
+    #   ansible.builtin.template:
+    #     src: network_proposal_html.j2
+    #     dest: network_proposal.html
