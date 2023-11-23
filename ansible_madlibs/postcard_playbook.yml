@@ -3,20 +3,19 @@
   hosts: localhost
   vars:
     persons_name: 
-    verb_1:
-    celebrity:
-    tv_show:
-    tv_charater:
+    verb_1: 
+    celebrity: 
+    tv_show: 
+    tv_charater: 
     vendor: 
     noun_1: 
     noun_2: 
     noun_3: 
     adjective_1: 
-    vendor: 
     noun_4: 
-    adjective_2: 
-    cite_session: 
     verb_2: 
+    cite_session: 
+    verb_3: 
     salutation: 
 
 
