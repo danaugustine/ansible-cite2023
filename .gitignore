@@ -2,4 +2,4 @@
 ansible_madlibs/net.txt
 ansible_madlibs/network_proposal.html
 ansible_madlibs/network_proposal.txt
-district_network/output/ruckus_rosaparks.txt
+district_network/output/*.txt
