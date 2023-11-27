@@ -1,7 +1,4 @@
 .DS_Store
 Lab-1_madlibs/net.txt
-Lab-1_madlibs/*.html
-Lab-1_madlibs/*.txt
 Lab-2_district_network/output/*.txt
-Lab-1_madlibs/*.md
-Lab-1_madlibs/*.txt
+Lab-1_madlibs/output/*

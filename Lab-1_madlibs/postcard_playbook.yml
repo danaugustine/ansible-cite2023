@@ -25,7 +25,7 @@
     - name: write Mad Lib using jinja2 template in markdown
       ansible.builtin.template:
         src: cite_postcard_md.j2
-        dest: cite_postcard.md
+        dest: output/cite_postcard.md
 
     # - name: write Mad Lib using jinja2 as a HTML file
     #   ansible.builtin.template:
