@@ -8,9 +8,9 @@ location {{ sitename }} [router loopback: 10.1.1.{{ sitecode }}] {{ siteaddress 
 # Generate the Ruckus create vlan statements from a dictionary called vlans
 
 # Iterate over the key, value pairs in the dictionary 
+# Check to see if trunk_port variable is defined. Include trunk port if it is. Pass if undefined.
 {% for vlan_id, vlan_name in vlans.items() %}
   vlan {{ vlan_name }} name {{ vlan_id }} by port
-  # Check to see if trunk_port variable is defined. Include trunk port if it is. Pass if undefined.
   {% if trunk_port is defined %}
   tagged {{ trunk_port }}
   {% endif %}
