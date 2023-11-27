@@ -1,6 +1,7 @@
 ---
 - name: Mad Libs - Postcard from CITE
   hosts: localhost
+  # Usually this would be part of your host_vars, but Ansible lets you define variables in the playbook, so this is valid.
   vars:
     persons_name: 
     verb_1: 
@@ -21,7 +22,7 @@
 
     
   tasks:
-    - name: write Mad Lib using jinja2 template in Markdown
+    - name: write Mad Lib using jinja2 template in markdown
       ansible.builtin.template:
         src: cite_postcard_md.j2
         dest: cite_postcard.md
