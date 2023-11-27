@@ -2,8 +2,9 @@
 - name: Router configs your District
   hosts: all
 
+
   tasks:
-    - name: Write an SNMP config block for Ruckus Switch
+    - name: Write a config block for Ruckus Routers
       ansible.builtin.template:
         src: ruckus.j2
         dest: output/ruckus_{{inventory_hostname}}.txt

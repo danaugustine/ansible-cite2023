@@ -5,43 +5,14 @@
 contact BUSD Technology <technologyhelpdesk@berkeley.net>
 location {{ sitename }} [router loopback: 10.1.1.{{ sitecode }}] {{ siteaddress }} [{{ sitegps }}]
 
-#Add all VLAN 
+# Generate the Ruckus create vlan statements from a dictionary called vlans
 
-vlan 7
- name BUILDING
+# Iterate over the key, value pairs in the dictionary 
+{% for vlan_id, vlan_name in vlans.items() %}
+  vlan {{ vlan_name }} name {{ vlan_id }} by port
+  {% if is_trunk %}
+  tagged {{ trunk_port }}
+  {% endif %}
 !
-vlan 10
- name MANAGEMENT
-!
-vlan 16   
- name WIRED_PORT
-!
-vlan 24
- name RESERVED_FOR_LOCAL_SITE
-!
-vlan 112
- name WIRELESS_1
-!
-vlan 128
- name WIRELESS_2
-!
-vlan 144
- name WIRELESS_3
-!
-vlan 160
- name WIRELESS_4
-!
-vlan 176
- name WIRELESS_5
-!
-vlan 192
- name WIRELESS_6
-!
-vlan 401
- name VOICE
-!
-vlan 701
- name CAMERA
-!
-vlan 801
- name HEALTH
+{% endfor %}
+

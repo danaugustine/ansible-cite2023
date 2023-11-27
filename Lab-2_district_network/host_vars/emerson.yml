@@ -1,6 +1,13 @@
 ---
 sitecode: 13
-sitename: Emerson Elementary School_123
-siteabbreviation: EME_123
+sitename: Emerson Elementary School
+siteabbreviation: EME
 siteaddress: 2800 Forest Ave, Berkeley, CA 94705
 sitegps: 37.8610751,-122.250278
+is_trunk: false
+vlans:
+  Access : 19
+  GuestWiFi : 29
+  StudentWiFi : 39
+  StaffWiFi : 49
+  Management : 299

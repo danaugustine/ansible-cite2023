@@ -1,9 +1,0 @@
----
-- name: Router VLAN
-  hosts: rosaparks
-
-  tasks:
-    - name: Create Router VLANs
-      ansible.builtin.template:
-        src: templates/router_vlans.j2
-        dest: output/{{inventory_hostname}}_create_vlans.txt
