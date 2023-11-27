@@ -1,6 +1,6 @@
 .DS_Store
-ansible_madlibs/net.txt
-ansible_madlibs/network_proposal.html
-ansible_madlibs/network_proposal.txt
+Lab-1_madlibs/net.txt
+Lab-1_madlibs/network_proposal.html
+Lab-1_madlibs/network_proposal.txt
 district_network/output/*.txt
-ansible_madlibs/cite_postcard.md
+Lab-1_madlibs/cite_postcard.md
