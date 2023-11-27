@@ -4,7 +4,6 @@
   # Usually this would be part of your host_vars, but Ansible lets you define variables in the playbook, so this is valid.
   vars:
     persons_name: 
-    verb_1: 
     celebrity: 
     tv_show: 
     tv_charater: 
@@ -16,7 +15,6 @@
     noun_4: 
     verb_2: 
     cite_session: 
-    verb_3: 
     salutation: 
 
 
