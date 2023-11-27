@@ -10,7 +10,7 @@ location {{ sitename }} [router loopback: 10.1.1.{{ sitecode }}] {{ siteaddress 
 # Iterate over the key, value pairs in the dictionary 
 {% for vlan_id, vlan_name in vlans.items() %}
   vlan {{ vlan_name }} name {{ vlan_id }} by port
-  {% if is_trunk %}
+  {% if trunk_port is defined %}
   tagged {{ trunk_port }}
   {% endif %}
 !
