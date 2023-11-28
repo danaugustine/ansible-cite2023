@@ -22,5 +22,9 @@
   tasks:
     - name: write Mad Lib using jinja2 template in markdown
       ansible.builtin.template:
-        src: postcard_template.j2
+        src: postcard_template_markdown.j2
         dest: output/cite_postcard.md
+    - name: write Mad Lib using jinja2 template in plain text
+      ansible.builtin.template:
+        src: postcard_template_text.j2
+        dest: output/cite_postcard.txt
