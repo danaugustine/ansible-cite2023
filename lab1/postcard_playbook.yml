@@ -24,8 +24,3 @@
       ansible.builtin.template:
         src: postcard_template.j2
         dest: output/cite_postcard.md
-
-    # - name: write Mad Lib using jinja2 as a HTML file
-    #   ansible.builtin.template:
-    #     src: network_proposal_html.j2
-    #     dest: network_proposal.html
