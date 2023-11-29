@@ -4,9 +4,9 @@ _Novemeber 30, 2023 - https://go.ousd.org/ansible_
 
 ---
 
-## QR Code
+## Link to this page
 
-<img alt="Link to this page" src="_images/go.ousd.org-ansible.png" alt="image" width="400" height="auto">
+<img alt="QR Code" src="_images/go.ousd.org-ansible.png" alt="image" width="400" height="auto">
 
 ---
 
