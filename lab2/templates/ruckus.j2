@@ -40,13 +40,15 @@ ip route 0.0.0.0/0 {{ ptp_uplink_core_side }}
 {# Iterate over the vlans in the dictionary #}
 {% for vlan_name, vlan_id in vlans.items() %}
 !
-  vlan {{ vlan_id }} name {{ vlan_name }} by port
+vlan {{ vlan_id }} name {{ vlan_name }} by port
+  router-interface ve {{ vlan_id }}
 !
-  interface ve {{ vlan_id }}
-    port-name {{ vlan_name }}
-    ip address 10.{{ sitecode }}.{{ vlan_id }}.1 255.255.252.0
-    no ip redirect
-    ip helper-address 1 10.60.8.5
+interface ve {{ vlan_id }}
+  port-name {{ vlan_name }}
+  ip address 10.{{ sitecode }}.{{ vlan_id }}.1 255.255.252.0
+  no ip redirect
+  ip helper-address 1 10.60.8.5
 !
 {% endfor %}
+!
 !
