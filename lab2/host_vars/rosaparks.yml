@@ -7,8 +7,8 @@ sitegps: 37.8654198,-122.297200
 is_trunk: true
 trunk_port: ethe 1/3/4
 vlans:
-  Access : 19
-  GuestWiFi : 29
-  StudentWiFi : 39
-  StaffWiFi : 49
-  Management : 200
+  ACCESS : 19
+  GUEST_WIFI : 29
+  STUDENT_WIFI : 39
+  STAFF_WIFI : 49
+  MANAGEMENT : 200
