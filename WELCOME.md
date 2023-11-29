@@ -4,6 +4,12 @@ _Novemeber 30, 2023 - https://go.ousd.org/ansible_
 
 ---
 
+## QR Code
+
+<img alt="Link to this page" src="_images/go.ousd.org-ansible.png" alt="image" width="400" height="auto">
+
+---
+
 
 ## STEP 1: Open your to Google Cloud Shell Editor
 
