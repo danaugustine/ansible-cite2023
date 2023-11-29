@@ -17,3 +17,8 @@ location {{ sitename }} [router loopback: 10.1.1.{{ sitecode }}] {{ siteaddress 
 !
 {% endfor %}
 
+! setup routed interface to Backbone
+interface ve 1000
+ port-name Backbone
+ ip address 10.99.99.{{ sitecode }} 255.255.255.0
+ no ip redirect
