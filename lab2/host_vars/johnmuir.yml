@@ -6,8 +6,8 @@ siteaddress: 2955 Claremont Avenue, Berkeley, CA 94705
 sitegps: 37.857419,-122.244702
 is_trunk: false
 vlans:
-  Access : 19
-  GuestWiFi : 29
-  StudentWiFi : 39
-  StaffWiFi : 49
-  Management : 299
+  Access : 10
+  GuestWiFi : 20
+  StudentWiFi : 30
+  StaffWiFi : 40
+  Management : 200

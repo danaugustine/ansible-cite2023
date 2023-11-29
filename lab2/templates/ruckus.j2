@@ -8,6 +8,7 @@
 !    site code ........................ {{ sitecode }}
 !    site abbreviation ................ {{ siteabbreviation }}
 !    site address ..................... {{ siteaddress }}
+!    site loopback address ............ 10.1.1.{{ sitecode }}
 !    site aggregate prefix ............ 10.{{ sitecode }}.0.0/16
 !    ptp uplink prefix ................ {{ ptp_uplink_prefix }}
 !      ptp uplink core side ........... {{ ptp_uplink_core_side }}
@@ -32,18 +33,14 @@ location {{ sitename }} [router loopback: 10.1.1.{{ sitecode }}] {{ siteaddress 
 !
 {% endfor %}
 
+ip route 0.0.0.0/0 {{ ptp_uplink_core_side }} 10
+
 ! setup routed interface to Backbone
 interface ve 1000
  port-name BACKBONE_UPLINK
- ip address 10.99.99.{{ sitecode }} 255.255.255.0
+ ip address {{ ptp_uplink_site_side }} 255.255.255.252
  no ip redirect
 
- interface ve 15
- port-name WAP-Management
- ip address 10.{{ sitecode }}.15.1 255.255.255.0
- no ip redirect
- ip helper-address 1 10.50.8.4
-!
 interface ve 16
  port-name Student-WL
  ip address 10.{{ sitecode }}.16.1 255.255.252.0

@@ -11,4 +11,4 @@ vlans:
   GuestWiFi : 29
   StudentWiFi : 39
   StaffWiFi : 49
-  Management : 299
+  Management : 200
