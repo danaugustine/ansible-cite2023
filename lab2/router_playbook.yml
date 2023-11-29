@@ -4,6 +4,11 @@
 
 
   tasks:
+    - name: Create facts
+      set_fact:
+        ptp_uplink_prefix: "{{ '10.9.0.0/21' | ansible.utils.ipsubnet(30, + hostvars[inventory_hostname].sitecode) }}"
+        ptp_uplink_core_side: "{{ '10.9.0.0/21' | ansible.utils.ipsubnet(30, + hostvars[inventory_hostname].sitecode) | ansible.utils.ipmath(2) }}"
+        ptp_uplink_site_side: "{{ '10.9.0.0/21' | ansible.utils.ipsubnet(30, + hostvars[inventory_hostname].sitecode) | ansible.utils.ipmath(3) }}"
     - name: Write a config block for Ruckus Routers
       ansible.builtin.template:
         src: ruckus.j2

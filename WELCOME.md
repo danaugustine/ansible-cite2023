@@ -28,7 +28,7 @@ If all goes well, you should see this after 30 seconds:
 Run the following commands 
 
 ```
-pip install ansible
+pip install netaddr ansible
 export "PATH=$PATH:/home/$USER/.local/bin"
 ```
 

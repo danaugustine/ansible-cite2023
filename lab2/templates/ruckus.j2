@@ -1,14 +1,29 @@
-# Ruckus Template for ICX
+!-------------------------------------------------------------------------
+!
+!  Ruckus Configuration for {{ sitename }}
+!
+!  Configuration Generated ............ {{ lookup('pipe','date +%Y-%m-%d') }}
+!
+!  sitename ........................... {{ sitename }}
+!    site code ........................ {{ sitecode }}
+!    site abbreviation ................ {{ siteabbreviation }}
+!    site address ..................... {{ siteaddress }}
+!    site aggregate prefix ............ 10.{{ sitecode }}.0.0/16
+!    ptp uplink prefix ................ {{ ptp_uplink_prefix }}
+!      ptp uplink core side ........... {{ ptp_uplink_core_side }}
+!      ptp uplink site side ........... {{ ptp_uplink_site_side }}
+!
+!-------------------------------------------------------------------------
 
-# Enter commands in 'config' mode
+! Enter commands in 'config' mode
 
 contact BUSD Technology <technologyhelpdesk@berkeley.net>
 location {{ sitename }} [router loopback: 10.1.1.{{ sitecode }}] {{ siteaddress }} [{{ sitegps }}]
 
-# Generate the Ruckus create vlan statements from a dictionary called vlans
+! Generate the Ruckus create vlan statements from a dictionary called vlans
 
-# Iterate over the key, value pairs in the dictionary 
-# Check to see if trunk_port variable is defined. Include trunk port if it is. Pass if undefined.
+! Iterate over the key, value pairs in the dictionary 
+! Check to see if trunk_port variable is defined. Include trunk port if it is. Pass if undefined.
 {% for vlan_id, vlan_name in vlans.items() %}
   vlan {{ vlan_name }} name {{ vlan_id }} by port
   {% if trunk_port is defined %}
@@ -19,6 +34,84 @@ location {{ sitename }} [router loopback: 10.1.1.{{ sitecode }}] {{ siteaddress 
 
 ! setup routed interface to Backbone
 interface ve 1000
- port-name Backbone
+ port-name BACKBONE_UPLINK
  ip address 10.99.99.{{ sitecode }} 255.255.255.0
  no ip redirect
+
+ interface ve 15
+ port-name WAP-Management
+ ip address 10.{{ sitecode }}.15.1 255.255.255.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 16
+ port-name Student-WL
+ ip address 10.{{ sitecode }}.16.1 255.255.252.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 32
+ port-name Staff-WL
+ ip address 10.{{ sitecode }}.32.1 255.255.252.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 36
+ port-name Chrome-device-WL
+ ip address 10.{{ sitecode }}.36.1 255.255.252.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 40
+ port-name Chrome-Student-WL
+ ip address 10.{{ sitecode }}.40.1 255.255.252.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 44
+ port-name Chrome-Teacher-WL
+ ip address 10.{{ sitecode }}.44.1 255.255.252.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 48
+ port-name Guest-WL
+ ip address 10.{{ sitecode }}.48.1 255.255.252.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 80
+ port-name VoIP
+ ip address 10.{{ sitecode }}.80.1 255.255.252.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 100
+ port-name Switch-Mgmt
+ ip address 10.{{ sitecode }}.100.1 255.255.255.0
+ no ip redirect
+!
+interface ve 103
+ port-name Cameras
+ ip address 10.{{ sitecode }}.103.1 255.255.255.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 104
+ port-name HVAC
+ ip address 10.{{ sitecode }}.104.1 255.255.255.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 105
+ port-name Clock-Bell
+ ip address 10.{{ sitecode }}.105.1 255.255.255.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
+interface ve 204
+ port-name Wired-User-Access
+ ip address 10.{{ sitecode }}.204.1 255.255.252.0
+ no ip redirect
+ ip helper-address 1 10.50.8.4
+!
