@@ -4,7 +4,6 @@ sitename: John Muir Elementary School
 siteabbreviation: JME
 siteaddress: 2955 Claremont Avenue, Berkeley, CA 94705
 sitegps: 37.857419,-122.244702
-is_trunk: false
 vlans:
   ACCESS : 10
   GUEST_WIFI : 20

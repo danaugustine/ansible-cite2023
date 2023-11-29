@@ -37,14 +37,10 @@ interface ve 1000
 ! Static default route
 ip route 0.0.0.0/0 {{ ptp_uplink_core_side }} 
 !
-{# Iterate over the key, value pairs in the dictionary #}
-{# Check to see if trunk_port variable is defined. Include trunk port if it is. Pass if undefined. #}
+{# Iterate over the vlans in the dictionary #}
 {% for vlan_name, vlan_id in vlans.items() %}
 !
   vlan {{ vlan_id }} name {{ vlan_name }} by port
-{% if trunk_port is defined %}
-  tagged {{ trunk_port }}
-{% endif %}
 !
   interface ve {{ vlan_id }}
     port-name {{ vlan_name }}

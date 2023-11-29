@@ -36,16 +36,10 @@ set forwarding-options dhcp-relay relay-option default-action relay-server-group
 set forwarding-options dhcp-relay server-group DHCP_VLANS 10.60.8.5
 set forwarding-options dhcp-relay active-server-group DHCP_VLANS
 #
-{# Iterate over the key, value pairs in the dictionary #}
-{# Check to see if trunk_port variable is defined. Include trunk port if it is. Pass if undefined. #}
+{# Iterate over the vlans in the dictionary #}
 {% for vlan_name, vlan_id in vlans.items() %}
 #
 set vlans {{ vlan_name }} vlan-id {{ vlan_id }}
-{% if trunk_port is defined %}
-#
-  tagged {{ trunk_port }}
-#
-{% endif %}
 #
 set interfaces irb unit {{ vlan_id }} description CAN_{{ vlan_name }}
 set interfaces irb unit {{ vlan_id }} family inet address 10.{{ sitecode }}.{{ vlan_id }}.1/24
