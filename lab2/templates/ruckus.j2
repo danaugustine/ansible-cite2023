@@ -15,7 +15,7 @@
 !      ptp uplink site side ........... {{ ptp_uplink_site_side }}
 !  vlans
 {% for vlan_name, vlan_id in vlans.items() %}
-!    {{ "%-13s" | format(vlan_name) }} .................... {{ vlan_id }} 
+!    {{ "%-13s" | format(vlan_name) }} .................... {{ '%03d' % vlan_id }}
 {% endfor %}
 !
 !-------------------------------------------------------------------------
