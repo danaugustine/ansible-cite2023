@@ -3,7 +3,7 @@
   hosts: all
 
   tasks:
-    - command: "date '+%Y-%m-%d %H:%M:%S'"
+    - command: "date '+%Y-%m-%d %H:%M'"
       register: date_us_pacific
       environment:
         TZ: US/Pacific
