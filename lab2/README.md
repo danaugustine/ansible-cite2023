@@ -2,6 +2,6 @@
 
 ```
 cd 
-cd ansible-cite2023/lab1
+cd ansible-cite2023/lab2
 ansible-playbook router_playbook.yml
 ```
