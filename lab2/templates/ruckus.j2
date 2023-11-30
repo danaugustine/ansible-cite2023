@@ -45,7 +45,7 @@ vlan {{ vlan_id }} name {{ vlan_name }} by port
 !
 interface ve {{ vlan_id }}
   port-name {{ vlan_name }}
-  ip address 10.{{ sitecode }}.{{ vlan_id }}.1 255.255.252.0
+  ip address 10.{{ sitecode }}.{{ vlan_id }}.1 255.255.255.0
   no ip redirect
   ip helper-address 1 10.60.8.5
 !
