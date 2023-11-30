@@ -2,8 +2,11 @@
 - name: Router configs your District
   hosts: all
 
-
   tasks:
+    - command: "date '+%Y-%m-%d %H:%M:%S'"
+      register: date_us_pacific
+      environment:
+        TZ: US/Pacific
     - name: Create facts which are transformed from sitecode
       set_fact:
         ptp_uplink_prefix:    "{{ '10.9.0.0/21' | ansible.utils.ipsubnet(30, + hostvars[inventory_hostname].sitecode) }}"
