@@ -4,12 +4,11 @@ _Novemeber 30, 2023 - https://go.ousd.org/ansible_
 
 ---
 
-## Link to this page
+## Presentation slides
 
-<img alt="QR Code" src="_images/go.ousd.org-ansible.png" alt="image" width="400" height="auto" border="1px solid black">
+Google Presentation [slides](https://docs.google.com/presentation/d/1vDlhoflZF2kDeqWS1Akn29r06NjpkyyxHo_-NFKiOTY/edit#slide=id.g230dd433307_0_56) for Nov 30, 2024
 
 ---
-
 
 ## STEP 1: Open your to Google Cloud Shell Editor
 
