@@ -26,7 +26,6 @@ set snmp contact "Technology Dept <technologyhelpdesk@yourschooldistrict.net>"
 set snmp location "{{ sitename }} {{ siteaddress }} [{{ sitegps }}]"
 #
 set interfaces lo0 unit 0 family inet address 10.1.1.{{ sitecode }}/32
-#
 set interfaces irb unit 1000 description BACKBONE_UPLINK
 set interfaces irb unit 1000 family inet address {{ ptp_uplink_site_side }}/30
 # Static default route
